@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/counter.dart';
 import 'package:myapp/count.dart';
 import 'package:myapp/countreset.dart';
+import 'package:myapp/countstop.dart';
 import 'package:provider/provider.dart';
 
 // void main() {
@@ -57,9 +58,8 @@ const MyHomepage({Key key}) : super(key : key);
               const Text('You have ~~~'),
               const Count(),
               RaisedButton(
-                // onPressed: const CountReset(),
                 onPressed: () {
-                  int count = 0;
+                  context.read<Counter>().decreement();
                 },
               )
             ],
