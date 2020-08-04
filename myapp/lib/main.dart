@@ -58,8 +58,15 @@ const MyHomepage({Key key}) : super(key : key);
               const Text('You have ~~~'),
               const Count(),
               RaisedButton(
+                child: Text("Decree"),
                 onPressed: () {
                   context.read<Counter>().decreement();
+                },
+              ),
+              RaisedButton(
+                child: Text("Reset"),
+                onPressed: () {
+                  context.read<Counter>().reset();
                 },
               )
             ],
